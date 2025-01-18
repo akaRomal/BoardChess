@@ -106,9 +106,9 @@ fun ChessBoard(
         }
 
         // Отрисовываем фигуры
-        piecePosition.pieces.forEach { piece ->
-            val rectX = piece.coordinate.x * cellSize
-            val rectY = piece.coordinate.y * cellSize
+        piecePosition.piecePositions.forEach { (position, piece) ->
+            val rectX = position.x * cellSize
+            val rectY = position.y * cellSize
             pieceImagesDefault[piece.fenName]?.let { image ->
                 drawRotatedImage(
                     image = image,
